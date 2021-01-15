@@ -1,0 +1,54 @@
+.composition {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    [class^="composition__photo"]{
+        transition: all 2s ease-in;
+        border-radius: 1.5rem;
+    }
+
+    &__photo {
+        width: 150px;
+        &--p1{
+            &:hover {
+                animation: orangeHtml 1s ease-out;
+                animation-fill-mode: forwards;
+            }
+        }
+        &--p2{
+            width: 165px;
+            &:hover {
+                animation: blueCss 1s ease-out;
+                animation-fill-mode: forwards;
+            }
+        }
+        &--p3{
+            &:hover {
+                animation: yellowJS 1s ease-out;
+                animation-fill-mode: forwards;
+            }
+        }
+        &--p4{
+            &:hover {
+                animation: lightBlueReact 1s ease-out;
+                animation-fill-mode: forwards;
+            }
+        }
+        &--p5{
+            &:hover {
+                animation: greenNode 1s ease-out;
+                animation-fill-mode: forwards;
+            }
+        }
+        &--p6{
+            &:hover {
+                animation: blueCss 1s ease-out;
+                animation-fill-mode: forwards;
+            }
+        }
+        &:not(:first-child):not(:nth-child(2)) {
+        filter: drop-shadow(5px 3px 2px #222);
+        }
+    }
+}

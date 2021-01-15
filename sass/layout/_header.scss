@@ -1,0 +1,49 @@
+.header {
+    height: 78vh;
+    background: linear-gradient(to right bottom,rgba(6, 124, 202, 0.7), rgba(57, 153, 78, 0.6)), url('../dist/images/header-gif.gif') no-repeat center center/cover;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh,0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 75vh,0 100%);
+    position: relative;
+    border-radius: 5rem 5rem 0px 0px;
+
+&__logo-box {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    transition: all 3s;
+    &:hover {
+        transform: rotate(360deg);
+    }
+}
+
+&__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+&__circle {
+    border: 2px solid $white;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    top: 8px;
+    position: absolute;
+    cursor: pointer;
+    &--1 {
+        right: 30px;
+        background: #cc00ffaf;
+
+    }
+    &--2 {
+        right: 70px;
+        background: rgb(0, 153, 117);
+    }
+    &--3 {
+        right: 110px;
+        background: url('../dist/images/header-gif.gif')
+    }
+}
+}

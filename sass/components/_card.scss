@@ -1,0 +1,146 @@
+.card {
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    position: relative;
+    height: 36rem;
+
+    &__side {
+    font-size: 2rem;
+    height: 36rem;
+    transition: all .8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba($black, .15);
+
+    &--front {
+        background-color: $white;
+    }
+
+    &--back{
+        transform: rotateY(180deg);
+
+        &-1{
+            background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
+        }
+        &-2{
+            background-image: linear-gradient(to right bottom, $light-green, $color-primary);
+        }
+        &-3{
+            background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
+        }
+    }
+    }
+
+    &:hover &__side--front {
+        transform:rotateY(-180deg);
+    }
+
+    &:hover &__side--back {
+        transform: rotateY(0deg);
+    }
+
+    // Front side of picture
+
+    // Added line for picture one to fit in the card only __picture--1
+
+    &__picture{
+        background-size: cover;
+        height: 14rem;
+        background-blend-mode: screen;
+        -webkit-clip-path: polygon(0 0,100% 0,100% 85%,0% 100%);
+        clip-path: polygon(0 0,100% 0,100% 85%,0% 100%);
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        &--1{
+            background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark), url(../dist/images/example.jpg);
+        }
+        &--2{
+            background-image: linear-gradient(to right bottom, $light-green, $color-primary), url(../dist/images/example.jpg);
+        }
+        &--3{
+            background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark), url(../dist/images/example.jpg);
+        }
+        &--4{
+            background-image: url(../dist/images/react.png);
+        }
+    }
+
+    &__heading {
+        font-size: 2.8rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: $white;
+        position: absolute;
+        top: 6rem;
+        right: 2rem;
+        text-align: right;
+        width: 75%;
+    }
+
+    // Back side of card
+
+    &__heading-span {
+        padding: 1rem 1.5rem;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+        &--1 {
+            background-image: linear-gradient(to right bottom,
+            rgba($color-secondary-light,  .85),
+            rgba($color-secondary-dark, .85));
+        }
+        &--2 {
+            background-image: linear-gradient(to right bottom,
+            rgba($light-green,  .85),
+            rgba($color-primary, .85));
+        }
+        &--3 {
+            background-image: linear-gradient(to right bottom,
+            rgba($color-tertiary-light,  .85),
+            rgba($color-tertiary-dark, .85));
+        }
+    }
+
+    &__details {
+        padding: 1rem 3rem;
+        color: darkslategrey;
+        margin-top: 2rem;
+        ul {
+            list-style: none;
+            width: 80%;
+            margin: 0 auto;
+
+            li {
+                text-align: center;
+                font-size: 1.5rem;
+                padding: 0.5rem;
+
+                &:not(:last-child){
+                    border-bottom: 1px dotted $dark-grey;
+                }
+            }
+        }
+    }
+
+    // Front side styling
+
+    &__cta {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 80%;
+        text-align: center;
+    }
+
+    &__description {
+        font-size: 1.8rem;
+        color: $white;
+        font-weight: 400;
+        margin-bottom: 8rem;
+    }
+}

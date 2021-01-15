@@ -1,0 +1,219 @@
+ // Menu - Show More Projects
+
+  /* MENU WRAPPING WHERE THE HEADINGS ARE GOING TO POP UP IN */
+
+  .menu-wrap {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+  }
+
+  /* TOGGLER WHICH IS HIDDEN OPACITY SET TO 0 */
+
+  .menu-wrap .toggler {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+  }
+
+  /* HAMBURGER CONTAINER - AROUND LINES  */
+
+  .menu-wrap .hamburger {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: 60px;
+    height: 60px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* -----------------------
+HAMBURGER LINES
+-------------------------- */
+
+  /* CREATING THE FIRST HAMBURGER LINE THE MIDDLE ONE */
+
+  .menu-wrap .hamburger div {
+    position: relative;
+    flex: none;
+    width: 100%;
+    height: 4px;
+    // background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+  }
+
+  /* CREATING THE UPPER AND LOWER HAMBURGER LINES */
+
+  .menu-wrap .hamburger div:before,
+  .menu-wrap .hamburger div:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: -10px;
+    width: 100%;
+    height: 4px;
+    background: inherit;
+  }
+
+  /* THIRD HAMBURGER LINE AT BOTTOM - BOTH BEFORE AND AFTER GET CREATED BUT ON SAME PLACING ON PAGE */
+
+  .menu-wrap .hamburger div:after {
+    top: 10px;
+  }
+
+  /* TOGGLER ANIMATION */
+
+  /* USE THE + SIGN HERE TO SAY WHEN CHECKED THEN GO TO THIS DIV. SINCE YOU WANT BOTH. YOU WANT IT CHECKED AND YOU WANT THAT DIV  */
+
+  .toggler:checked + .hamburger > div {
+    transform: rotate(135deg);
+    background: white;
+  }
+
+  /* THIS TURNS LINES INTO X BELOW  */
+
+  .menu-wrap .toggler:checked + .hamburger > div:before,
+  .menu-wrap .toggler:checked + .hamburger > div::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+
+  /* Rotate on hover when checked */
+
+  .menu-wrap .toggler:checked:hover + .hamburger div {
+    transform: rotate(225deg);
+  }
+
+  /* Show Menu - TILDE USED - This is used to target selectors that aren't in or directly after the activated selector */
+
+  .menu-wrap .toggler:checked ~ .menu {
+    visibility: visible;
+  }
+
+  .menu-wrap .toggler:checked ~ .menu > div {
+    transform: scale(1);
+    transition-duration: 0.75s;
+    background: rgba(0, 126, 244, 0.7)
+  }
+
+  .menu-wrap .toggler:checked ~ .menu > div > div {
+    opacity: 1;
+    transition: opacity 0.4s ease 0.4s;
+  }
+
+  .menu-wrap .menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu-wrap .menu > div {
+    background: blue;
+    width: 200vw;
+    height: 200vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+    transition: all 0.4s ease;
+    border-radius: 50%;
+    flex: none;
+  }
+
+  .menu-wrap .menu > div > div {
+    text-align: center;
+    max-width: 90vw;
+    max-height: 100vh;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  .menu-wrap .menu > div > div > ul > li {
+    list-style: none;
+    color: white;
+    font-size: 1.5rem;
+    padding: 1rem;
+  }
+
+  .menu-wrap .menu > div > div > ul > li > a {
+    text-decoration: none;
+    transition: color 0.4s ease;
+
+    ////////////////// Code Added for extra text effect
+
+    display: inline-block;
+    font-size: 3rem;
+    font-weight: 300;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    background-image: linear-gradient(115deg, transparent 0%, transparent 50%, white 50%);
+    background-size: 225%;
+    transition: all .4s;
+    color: white;
+    border-bottom: 2px solid white;
+  }
+
+  .menu-wrap .menu > div > div > ul > li > a:hover {
+    color: blue;
+    background-position: 100%;
+    transform: translateX(1rem);
+  }
+
+  // Drop down to see source code and demo
+
+  .dropdown {
+  height: 10vh;
+  width: 60%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.projects {
+  position: relative;
+  margin-bottom: 6rem;
+  border: none;
+}
+
+// Styling Dropdown button
+
+.dropdown button {
+  background: none;
+  text-decoration: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  outline: none;
+}
+
+.drop-item {
+  display: none;
+}
+
+.active {
+  display: block;
+}

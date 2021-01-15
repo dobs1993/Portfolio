@@ -1,0 +1,31 @@
+// &::after {
+//     transform: scale(1.5);
+//     opacity: 0;
+// }
+
+// &:active {
+// transform: translateY(-2px);
+// box-shadow: 0 .5rem .5rem rgba(6, 124, 202, 0.7);
+// }
+
+// &--white {
+//     background-color: $white;
+//     color: $dark-grey;
+
+//     &::after {
+//     background-color: $white;
+// }
+// }
+
+// &::after {
+//     content: "";
+//     display: inline-block;
+//     height: 80%;
+//     width: 80%;
+//     border-radius: 10rem;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     z-index: -1;
+//     transition: all 0.4s;
+// }

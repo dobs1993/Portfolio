@@ -1,0 +1,119 @@
+.btn {
+&:link,
+&:visited {
+text-transform: uppercase;
+text-decoration: none;
+padding: 0.5rem 3.5rem;
+display: inline-block;
+border-radius: 100px;
+transition: all 0.4s;
+position: relative;
+transition: all 4s;
+box-shadow: 0 .5rem 1rem rgba(6, 124, 202, 0.7);
+font-size: 3rem;
+font-family: 'Do Hyeon', sans-serif;
+color: slategrey;
+background: $white;
+border: transparent;
+}
+
+&--animated {
+animation: moveInBottom 2s;
+animation-fill-mode: backwards;
+transition: all 1.4s;
+animation-delay: 3.5s;
+}
+
+&:hover {
+box-shadow: 0 4rem 7rem rgba(6, 124, 202, 0.7);
+background: rgba(6, 124, 202, 0.7);
+border: 2px solid $white;
+color: $white;
+transform: translateY(-2.6rem);
+
+&::after {
+    animation: whiteHover 1.4s;
+    animation-fill-mode: forwards;
+}
+}
+
+&::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+    transition: all 0.3s;
+}
+
+
+// Button for source code in projects section
+
+&--src {
+    background: $white;
+    color: $dark-grey;
+    padding: 1.5rem 4rem;
+    border-radius: 50px;
+    font-size: 1.6rem;
+    transition: all 1.3s ease-in-out;
+    border: 2px solid transparent;
+    
+    &--1 {
+    &:hover {
+    background-color: $color-secondary-light;
+    color: $white;
+    border: 2px solid $white;
+    }
+    }
+
+    &--2 {
+    &:hover {
+    background-color: $light-green;
+    color: $white;
+    border: 2px solid $white;
+    }
+    }
+
+    &--3 {
+    &:hover {
+    background-color: $color-tertiary-light;
+    color: $white;
+    border: 2px solid $white;
+    }
+    }
+}
+}
+
+// See More Projects Button
+
+.more-projects {
+    display: inline;
+    padding: 3rem 1rem;
+    border-radius: 100%;
+    font-size: 2rem;
+    font-family: 'Do Hyeon', sans-serif;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+
+
+
+// Section Projects Button to avoid footer moving up and down - transparent border added
+
+// Not sure I need this code below
+
+.section-projects{
+    .btn{
+        &:hover {
+            border: transparent;
+        }
+    }
+}
