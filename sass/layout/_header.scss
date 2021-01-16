@@ -5,6 +5,12 @@
     clip-path: polygon(0 0, 100% 0, 100% 75vh,0 100%);
     position: relative;
     border-radius: 5rem 5rem 0px 0px;
+    margin-bottom: 2rem;
+
+    @include respond(phone){
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh,0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 85vh,0 100%);
+    }
 
 &__logo-box {
     position: absolute;
@@ -22,6 +28,10 @@
     left: 50%;
     transform: translate(-50%,-50%);
     text-align: center;
+
+    @include respond(tab-port){
+        margin-top: 10rem;
+    }
 }
 
 &__circle {
@@ -36,14 +46,28 @@
         right: 30px;
         background: #cc00ffaf;
 
+        @include respond(tab-port){
+            top: 90%;
+            left: 57%;
+        }
     }
     &--2 {
         right: 70px;
         background: rgb(0, 153, 117);
+
+        @include respond(tab-port){
+            top: 90%;
+            left: 46%;
+        }
     }
     &--3 {
         right: 110px;
-        background: url('../dist/images/header-gif.gif')
+        background: url('../dist/images/header-gif.gif');
+
+        @include respond(tab-port){
+            top: 90%;
+            left: 35%;
+        }
     }
 }
 }

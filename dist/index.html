@@ -10,6 +10,12 @@
     <link rel="stylesheet" href="../sass/main-one.css">
     <title>Mitch Dobney | Front End Engineer</title>
 </head>
+
+
+<!-- TO DO: -->
+
+
+<!-- NEED TO EDIT EACH POP UP EACH INDIVIDUAL CARD -->
 <body>
 
     <!-- Logo and Main Header Area -->
@@ -24,7 +30,7 @@
                     <span class="heading-primary--main">Mitch Dobney</span>
                     <span class="heading-primary--sub">Full Stack Engineer</span>
                 </h1>
-                <a href="#" class="btn btn--white btn--animated">View Projects</a>
+                <a href="#" class="btn btn--white btn--animated" onclick="projectSection()">View Projects</a>
             </div>
 
         <div class="header__circle header__circle--1"></div>
@@ -38,7 +44,8 @@
         <section class="section-about">
         <div class="u-center-text u-margin-bottom-big">
             <h2 class="heading-secondary">
-                Front End Focused With Full Stack Experience
+                Front End Focused
+                <div class="heading-secondary--underline"></div>
             </h2>
         </div>
 
@@ -51,10 +58,11 @@
 
                 <h3 class="heading-tertiary u-margin-bottom-small">A passion for code</h3>
                 <p class="paragraph">
-                    I constantly work on new and exciting projects and always stay attuned to the newest frameworks. I enjoy listening to tech podcasts and audiobooks in my spare time.
+                    I constantly work on new and exciting projects and always stay attuned to the newest frameworks. I enjoy listening to tech podcasts, audiobooks and reading about tech related subjects in my spare time.
                 </p>
-                <a href="#" class="new-main-btn">Learn More</a>
-                <button>fdgfdgfgfg</button>
+                <a target="__" href="https://github.com/dobs1993" class="github-btn btn--white">Github</a>
+                <!-- <a href="#" class="new-main-btn">Learn More</a>
+                <button>fdgfdgfgfg</button> -->
             </div>
             <div class="col-1-of-2">
             <div class="composition">
@@ -77,9 +85,14 @@
                 <div class="col-1-of-4">
                     <div class="feature-box">
                         <i class="feature-box__icon fas fa-desktop fa-4x"></i>
-                        <h3 class="heading-tertiary u-margin-bottom-small">Lorem ipsum dolor sit amet.</h3>
+                        <h3 class="heading-tertiary u-margin-bottom-small">Front End</h3>
                         <div class="feature-box__text">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi repellendus vero possimus reprehenderit soluta veritatis!
+                            <ul class="feature-box__list">
+                                <li>- HTML5</li>
+                                <li>- CSS3 | SASS</li>
+                                <li>- JAVASCRIPT</li>
+                                <li>- REACT | REDUX</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -87,10 +100,14 @@
                 <div class="col-1-of-4">
                     <div class="feature-box">
                         <i class="feature-box__icon fas fa-desktop fa-4x"></i>
-                        <h3 class="heading-tertiary u-margin-bottom-small">Lorem ipsum dolor sit amet.</h3>
+                        <h3 class="heading-tertiary u-margin-bottom-small">Server</h3>
                         <div class="feature-box__text">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi repellendus vero possimus reprehenderit
-                            soluta veritatis!
+                            <ul class="feature-box__list">
+                                <li>- NODEJS</li>
+                                <li>- PYTHON</li>
+                                <li>- C#</li>
+                                <li>- PHP</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -98,10 +115,14 @@
                 <div class="col-1-of-4">
                     <div class="feature-box">
                         <i class="feature-box__icon fas fa-desktop fa-4x"></i>
-                        <h3 class="heading-tertiary u-margin-bottom-small">Lorem ipsum dolor sit amet.</h3>
+                        <h3 class="heading-tertiary u-margin-bottom-small">MODULES</h3>
                         <div class="feature-box__text">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi repellendus vero possimus reprehenderit
-                            soluta veritatis!
+                            <ul class="feature-box__list">
+                                <li>- DJANGO</li>
+                                <li>- MATPLOTLIB</li>
+                                <li>- SELENIUM</li>
+                                <li>- PYGAME</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -109,10 +130,14 @@
                 <div class="col-1-of-4">
                     <div class="feature-box">
                         <i class="feature-box__icon fas fa-desktop fa-4x"></i>
-                        <h3 class="heading-tertiary u-margin-bottom-small">Lorem ipsum dolor sit amet.</h3>
+                        <h3 class="heading-tertiary u-margin-bottom-small">CMS</h3>
                         <div class="feature-box__text">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi repellendus vero possimus reprehenderit
-                            soluta veritatis!
+                            <ul class="feature-box__list">
+                                <li>- WORDPRESS</li>
+                                <li>- WOOCOMMERCE</li>
+                                <li>- SHOPIFY</li>
+                                <li>- MONERIS</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -121,10 +146,11 @@
 
         <!-- Projects Section -->
 
-        <section class="section-projects">
+        <section id="section-projects" class="section-projects">
             <div class="u-center-text u-margin-bottom-big">
                 <h2 class="heading-secondary">
                 Featured Projects
+                <div class="heading-secondary--underline"></div>
                 </h2>
             </div>
             <div class="row">
@@ -152,12 +178,30 @@
                         </div>
                         <div class="card__side card__side--back card__side--back-1">
                             <div class="card__cta">
-                                    <p class="card__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus necessitatibus nemo harum quod mollitia hic?</p>
-                                    <a href="#" class="btn--src btn--src--1">Source Code</a>
+                                    <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit</p>
+                                    <a href="#popup" class="btn--src btn--src--1">Source Code</a>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <div class="popup" id="popup">
+                    <div class="popup__content">
+                        <div class="popup__left">
+                            <img class="popup__img" src="./videos/123.gif" alt="">
+                        </div>
+                        <div class="popup-right">
+                            <a href="#section-projects" class="popup__close">&times;</a>
+                            <h2 class="heading-secondary">Name of APP</h2>
+                            <h3 class="heading-tertiary">random app description</h3>
+                            <p class="popup__text">
+                                ff
+                            </p>
+                            <a href="" class="btn btn--green">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Card 2 -->
                 <div class="col-1-of-3">
                     <div class="card">
@@ -181,7 +225,7 @@
                         </div>
                         <div class="card__side card__side--back card__side--back-2">
                             <div class="card__cta">
-                                <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium nihil aliquid ratione recusandae dolore molestias?</p>
+                                <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit</p>
                                 <a href="#" class="btn--src btn--src--2">Source Code</a>
                             </div>
                         </div>
@@ -211,7 +255,7 @@
                         </div>
                         <div class="card__side card__side--back card__side--back-3">
                             <div class="card__cta">
-                                <p class="card__description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi necessitatibus amet laboriosam maxime aperiam est.</p>
+                                <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit</p>
                                 <a href="#" class="btn--src btn--src--3">Source Code</a>
                             </div>
                         </div>
@@ -244,7 +288,7 @@
                         </div>
                         <div class="card__side card__side--back card__side--back-1">
                             <div class="card__cta">
-                                <p class="card__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit nesciunt fuga dicta laudantium itaque possimus.</p>
+                                <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit</p>
                                 <a href="#" class="btn--src btn--src--1">Source Code</a>
                             </div>
                         </div>
@@ -273,7 +317,7 @@
                         </div>
                         <div class="card__side card__side--back card__side--back-2">
                             <div class="card__cta">
-                                <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur deleniti ut officia provident, explicabo enim.</p>
+                                <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit</p>
                                 <a href="#" class="btn--src btn--src--2">Source Code</a>
                             </div>
                         </div>
@@ -303,7 +347,7 @@
                         </div>
                         <div class="card__side card__side--back card__side--back-3">
                             <div class="card__cta">
-                                <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit nobis architecto molestias. Facilis, harum aperiam.
+                                <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
                                 </p>
                                 <a href="#" class="btn--src btn--src--3">Source Code</a>
                             </div>
@@ -329,7 +373,14 @@
                             <div>
                                 <div class="dropdown">
                                     <div class="project">
-                                        <button>Imagineers - Oct 2020 <i class="fas fa-caret-down"></i></button>
+                                        <button>Imagineers - Website HTML/CSS/JS <i class="fas fa-caret-down"></i></button>
+                                        <ul class="drop-item">
+                                            <li><a target="__" href="http://www.imagineers.ca/">Demo</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="project">
+                                        <button>Imagineers <i class="fas fa-caret-down"></i></button>
                                         <ul class="drop-item">
                                             <li><a href="#">Source Code</a></li>
                                             <li><a href="#">Demo</a></li>
@@ -343,16 +394,72 @@
                                             <li><a href="#">Demo</a></li>
                                         </ul>
                                     </div>
+
+                                    <div class="project">
+                                        <button>Imagineers <i class="fas fa-caret-down"></i></button>
+                                        <ul class="drop-item">
+                                            <li><a href="#">Source Code</a></li>
+                                            <li><a href="#">Demo</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="project">
+                                        <button>Imagineers <i class="fas fa-caret-down"></i></button>
+                                        <ul class="drop-item">
+                                            <li><a href="#">Source Code</a></li>
+                                            <li><a href="#">Demo</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="project">
+                                        <button>Imagineers <i class="fas fa-caret-down"></i></button>
+                                        <ul class="drop-item">
+                                            <li><a href="#">Source Code</a></li>
+                                            <li><a href="#">Demo</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="project">
+                                        <button>Imagineers <i class="fas fa-caret-down"></i></button>
+                                        <ul class="drop-item">
+                                            <li><a href="#">Source Code</a></li>
+                                            <li><a href="#">Demo</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="project">
+                                        <button>Imagineers <i class="fas fa-caret-down"></i></button>
+                                        <ul class="drop-item">
+                                            <li><a href="#">Source Code</a></li>
+                                            <li><a href="#">Demo</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="project">
+                                        <button>Imagineers <i class="fas fa-caret-down"></i></button>
+                                        <ul class="drop-item">
+                                            <li><a href="#">Source Code</a></li>
+                                            <li><a href="#">Demo</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="project">
+                                        <button>Imagineers <i class="fas fa-caret-down"></i></button>
+                                        <ul class="drop-item">
+                                            <li><a href="#">Source Code</a></li>
+                                            <li><a href="#">Demo</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="project">
+                                        <button>Imagineers <i class="fas fa-caret-down"></i></button>
+                                        <ul class="drop-item">
+                                            <li><a href="#">Source Code</a></li>
+                                            <li><a href="#">Demo</a></li>
+                                        </ul>
+                                    </div>
+                                    <h3 class="dropdown--click">Click above to open a project</h3>
                                 </div>
-
-<!-- 
-                                <ul>
-                                    <li><a href="#main-header">Home</a></li>
-                                    <li><a href="#whatwedo">About</a></li>
-                                    <li><a href="#growth">Marketing</a></li>
-                                    <li><a target="_" href="http://www.imagineers.ca/">Imagineers -</a><a href="">Source Code</a> <a href="">Demo</a> </li>
-
-                                </ul> -->
                             </div>
                         </div>
                     </div>
@@ -371,20 +478,19 @@
             <div class="col-1-of-2">
                 <div class="footer__navigation">
                     <ul class="footer__list">
-                        <li class="footer__item"><a href="#" class="footer__link">Github</a></li>
-                        <li class="footer__item"><a href="#" class="footer__link">Linkedin</a></li>
-                        <li class="footer__item"><a href="#" class="footer__link">Resume</a></li>
+                        <li class="footer__item"><a target="__" href="https://github.com/dobs1993" class="footer__link">Github</a></li>
+                        <li class="footer__item"><a target="__" href="www.linkedin.com/in/mitch-dobney" class="footer__link">Linkedin</a></li>
+                        <li class="footer__item"><a target="__" href="#" class="footer__link">Resume</a></li>
                     </ul>
                 </div>
             </div>
             <div class="col-1-of-2">
                 <p class="footer__copyright">
-                    <small><em>Website creation by</em></small><a href="#" class="footer__link">Mitch Dobney</a>
+                    <small><em>Website creation by</em></small><a target="__" href="www.linkedin.com/in/mitch-dobney" class="footer__link">Mitch Dobney</a>
                 </p>
             </div>
         </div>
     </footer>
-
     <script src="app.js"></script>
 </body>
 </html>

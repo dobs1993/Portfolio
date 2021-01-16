@@ -1,9 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Righteous&display=swap');
+
 body {
-    font-family: Lato, 'sans-serif';
+    font-family: 'Bebas Neue', 'sans-serif' cursive;
     font-weight: 400;
     line-height: 1.7;
     color: $dark-grey;
-    padding: 3rem;
 }
 
 .heading-primary {
@@ -20,8 +21,13 @@ letter-spacing: 1.5rem;
 
 animation-name: moveInLeft;
 animation-duration: 2s;
-animation-delay: 0.75s;
+animation-delay: 0.5s;
 animation-fill-mode: backwards;
+
+@include respond(phone){
+        letter-spacing: 1rem;
+        font-size: 5rem
+    }
 }
 
 &--sub {
@@ -30,43 +36,72 @@ font-size: 2rem;
 font-weight: 300;
 letter-spacing: 1rem;
 animation: moveInRight 4s ease-in-out;
-animation-delay: 2.1s;
+animation-delay: 0.8s;
 animation-fill-mode: backwards;
+
+@include respond(phone){
+        letter-spacing: 0.5rem
+    }
 }
 }
 
 .heading-secondary {
+    margin-top: 1rem;
     font-size: 3.5rem;
     font-weight: bold;
     text-transform: uppercase;
-    background-image: linear-gradient(to right, $light-green, $purple);
+    color: $black;
     display: inline-block;
-    -webkit-background-clip: text;
-    color: transparent;
     letter-spacing: .2rem;
-    transition: all .2s;
+    font-family: 'Righteous', cursive;
 
-    &:hover {
-        transform: skewY(20deg) skewX(10deg) scale(1.2);
-        text-shadow: .5rem 1rem 2rem rgba($black, .2);
+    @include respond(tab-port){
+        font-size: 3rem;
     }
 
-    
+    @include respond(phone){
+        font-size: 2.5rem;
+    }
+
+    &:hover {
+        -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+        -webkit-mask-size: 200%;
+        animation: shine 5s infinite;
+    } 
+
+    &--underline {
+        width: 50%;
+        margin: 0 auto;
+        height: 5px;
+        color: black;
+        background-color: black;
+    }
+}
+
+@-webkit-keyframes shine {
+  from {
+    -webkit-mask-position: 150%;
+  }
+  
+  to {
+    -webkit-mask-position: -50%;
+  }
 }
 
 .heading-tertiary {
-    font-size: 1.6rem;
+    margin-top: 1.2rem;
+    font-size: 2.5rem;
+    letter-spacing: 0.2rem;
     font-weight: bold;
     text-transform: uppercase;
+    font-family: 'Righteous', cursive;
 }
 
 .paragraph {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
+    font-family: 'Bebas Neue', cursive;
 
     &:not(:last-child){
         margin-bottom: 3rem;
     }
 }
-
-
-

@@ -9,7 +9,9 @@
     }
 
     &__photo {
-        width: 150px;
+        width: 125px;
+        margin-bottom: 1rem;
+        margin-right: 0.15rem;
         &--p1{
             &:hover {
                 animation: orangeHtml 1s ease-out;
@@ -50,5 +52,9 @@
         &:not(:first-child):not(:nth-child(2)) {
         filter: drop-shadow(5px 3px 2px #222);
         }
+
+    @include respond(tab-landscape){
+        width: 80px;
+    }
     }
 }

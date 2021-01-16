@@ -68,3 +68,14 @@ projects.forEach(function (projects_current, index) {
         dropdown_lists[index].classList.toggle('active');
     });
 });
+
+
+
+
+// Smooth Scroll - View Projects Header Button
+
+function projectSection() {
+    window.scrollTo({ top: 2250, behavior: 'smooth' })
+};
+
+

@@ -183,19 +183,25 @@ HAMBURGER LINES
   // Drop down to see source code and demo
 
   .dropdown {
-  height: 10vh;
+  height: 80vh;
   width: 60%;
   margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-}
 
-.projects {
-  position: relative;
-  margin-bottom: 6rem;
-  border: none;
+  &--click {
+    margin-top: 2rem;
+    background: $white;
+    color: slategrey;
+    padding: 1rem 2rem;
+    font-size: 2rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 12, 20, 0.7);
+    border-radius: 5px;
+    font-family: 'Righteous', 'sans-serif', cursive;
+    letter-spacing: 0.2rem;
+  }
 }
 
 // Styling Dropdown button
@@ -205,13 +211,29 @@ HAMBURGER LINES
   text-decoration: none;
   border: none;
   color: white;
-  font-size: 18px;
+  font-size: 2.2rem;
+  letter-spacing: 0.25rem;
   cursor: pointer;
   outline: none;
+  margin-bottom: 0.75rem;
+  font-family: 'Bebas Neue', cursive;
 }
 
 .drop-item {
   display: none;
+}
+
+.drop-item li a {
+  font-size: 2rem;
+  padding: 0.25rem 0.5rem;
+  color: $white;
+  background: linear-gradient(to right, rgb(0, 126, 244),transparent);
+  padding-top: -4rem;
+  margin-bottom: 0.25rem;
+
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
 .active {
