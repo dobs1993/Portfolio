@@ -1031,8 +1031,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 80%;
-  height: 50rem;
+  width: 800px;
+  height: 300px;
   background-color: #fff;
   -webkit-box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.8);
           box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.8);

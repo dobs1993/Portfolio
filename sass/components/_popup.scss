@@ -17,8 +17,8 @@
     &__content {
         @include absCenter;
         display: flex;
-        width: 80%;
-        height: 50rem;
+        width: 800px;
+        height: 300px;
         background-color: $white;
         box-shadow: 0 2rem 4rem rgba(black,0.8);
         border-radius: 3px;
